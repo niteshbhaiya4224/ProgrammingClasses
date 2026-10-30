@@ -4,7 +4,10 @@ public class Recursivemethods {
     public static void main(String[] args) {
         // sayHello(0);
 
-        printNumber(1);
+        // printNumber(1);
+
+        int ans = factorial(5);
+        System.out.println("The factorial of 5 is: " + ans);
     }
 
     static void sayHello(int count) {
@@ -26,6 +29,13 @@ public class Recursivemethods {
         printNumber(count + 1);
     }
 
-    // print from 10 to 1 without using loop
+    // Factorial of a number using recursion
+
+    static int factorial(int num) { // 5!
+        if (num == 1) {
+            return 1;
+        }
+        return num * factorial(num - 1); // 120
+    }
 
 }
